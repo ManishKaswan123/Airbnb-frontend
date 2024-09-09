@@ -24,7 +24,7 @@ const SignupForm = ({ onClose , changeIsLoggedIn}) => {
     const handleContinue = async () => {
       try {
         setStepTwo(true);
-        const response = await fetch('http://localhost:3001/api/user/check-user', {
+        const response = await fetch('https://airbnb-backend-1-iqk6.onrender.com/api/user/check-user', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ phone: phoneNumber }),
@@ -52,7 +52,7 @@ const SignupForm = ({ onClose , changeIsLoggedIn}) => {
       try {
         setStepTwo(false);
         onClose();
-        const response = await fetch('http://localhost:3001/api/user/login', {
+        const response = await fetch('https://airbnb-backend-1-iqk6.onrender.com/api/user/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ phone: phoneNumber, password }),
@@ -82,7 +82,7 @@ const SignupForm = ({ onClose , changeIsLoggedIn}) => {
       try {
         setStepTwo(false);
         onClose();
-        const response = await fetch('http://localhost:3001/api/user/register', {
+        const response = await fetch('https://airbnb-backend-1-iqk6.onrender.com/api/user/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ phone: phoneNumber, firstName, lastName, email  , password }),

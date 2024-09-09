@@ -9,7 +9,7 @@ function Content() {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/items'); // Adjust the URL to your API endpoint
+        const response = await fetch('https://airbnb-backend-1-iqk6.onrender.com/api/items'); // Adjust the URL to your API endpoint
         const data = await response.json();
         setItems(data);
       } catch (error) {
