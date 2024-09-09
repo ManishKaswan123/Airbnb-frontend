@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-white">  
+    <div className="min-h-screen bg-white overflow-hidden">  
       <Header />
       {/* Adjust the top margin to avoid overlap */}
       <Content />
